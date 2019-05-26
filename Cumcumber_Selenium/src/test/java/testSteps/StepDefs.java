@@ -5,6 +5,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 
+import java.net.MalformedURLException;
+
 import org.junit.Assert;
 
 import pageObjects.PersonalHome;
@@ -16,7 +18,7 @@ public class StepDefs {
 	protected WebDriver driver;
 	
 	@Given("user is on Personal banking page")
-	public void user_is_on_Personal_banking_page() {
+	public void user_is_on_Personal_banking_page() throws MalformedURLException {
 	    // Open personal home page
 		driver = SetupDriver.getDriver();
 		page = new PersonalHome(driver);
