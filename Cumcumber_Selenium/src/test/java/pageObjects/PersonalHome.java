@@ -1,17 +1,18 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class PersonalHome extends BasePage {
-	String basehome_url = "https://www.anz.com.au/personal/";
+	public String home_url = "https://www.anz.com.au/personal/";
 	
 	// Locators
 	By portalDropDown = By.className("logon-trigger");
 	By loginButton = By.xpath("//div[contains(@class,'listitem') and @style='display: block;']/a");
 	
 	// Constructor
-    public PersonalHome() {
-    	super.home_url = basehome_url;
+    public PersonalHome(WebDriver driver) {
+    	super(driver);
     }
  
     /**
@@ -26,7 +27,7 @@ public class PersonalHome extends BasePage {
     }
     
     /**
-     * Verify the URL of the current visible Log in button is correct  
+     * Verify the URL of the current visible Log-in button is correct  
      *
      * @param portal	The portal drop-down that is current set
      * @return 			True if URL is expect; otherwise false 

@@ -13,6 +13,5 @@ plugin = {"pretty", "json:c:/target/report.json"},
 monochrome = true
 )
 
-public class testrunner {
-
+public class Testrunner {
 }
